@@ -1,0 +1,14 @@
+import random
+
+count = 0
+number = random.randint(1,10)
+print("1 ~ 10")
+
+while count < 10 :
+    count = count + 1
+    user_input = int(input("what number ?"))
+    if user_input == number:
+        break
+
+if user_input == number:
+    print("great{}".format(number))
