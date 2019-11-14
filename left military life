@@ -1,0 +1,14 @@
+import time
+import datetime
+
+from datetime import time,date,datetime,timedelta
+
+
+time1 = datetime(input("your discharge year:"), input("your discharge month :"), input("your discharge day :"))
+time2 = datetime.now()
+if time1 < time2 :
+    print(time2 - time1)
+   
+if time1 > time2 :
+    print(time1 - time2)
+ 
