@@ -1,0 +1,25 @@
+#-*-coding: utf-8-*-
+"""지역 변수 : 함수 내에서 선언한 변수로 해당 함수가 실행되는 동안에만
+존재하며 실행이 끝나면 없어집니다 ."""
+
+#전엳 변수 : 프로그램 내 어디에서나 사용 가능한 변수입니다.
+a = 10
+# 예제1
+"""def func(b) :
+    c = a + b
+    return c
+print(func(10))
+"""
+#예제 2
+def go() :
+    print("hello")
+    print("hello")
+    print("hello")
+go()
+#예제 3
+def square():
+    b = a * a
+    return b
+print(square())
+c = 20 + square()
+print(c)
