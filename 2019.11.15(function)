@@ -3,3 +3,16 @@
 #내장 함수 : 라이브러리에 미리 만들어놓은 함수
 
 #사용자 정의 함수 : 사용자가 직접 정의하여 사용할 수 있는 함수
+
+#return의 내용으로는 '값'과 '수식' 모두 들어갈 수 있습니다.
+#1
+def minus(a, b):
+    sum = a - b
+    return sum
+print(minus(20,10))
+#2
+def minus(a,b):
+    sum = a - b
+    print(sum)
+minus(10, 20)  
+
