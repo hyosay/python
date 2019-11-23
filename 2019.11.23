@@ -1,26 +1,23 @@
 #-*-coding: utf-8-*-
 import time
 import datetime
-from datetime import time,date, datetime, timedelta
+from datetime import time,date, datetime,timedelta
 
-def date():
-    print(datetime.now())
-date()
-
-time1 = datetime.now() ##time1 =  현재 시간
+#time1 =  현재 시간
+time1 = datetime.now() 
 datetime.now()
 print(datetime.now())
-print("")
-time2 = datetime(input("your discharge year"),input("your discharge mount"),input("yoyr discharge day")) ##time2 = 전역일
+#time2 = 전역일
+time2 = datetime(int(input("Your Discharge year :")),int(input("Your Discharge month :")),int(input("Your Discharge day :"))) 
 
 
+# 남은 군생활
 print(time2 - time1)
 #전역 전 100일 time3 =  time2 - timnedelta(days = 100)
+
 time3 = time2 - timedelta(days=100)
 
 if(time2 - time1 < time2 - time3):
-    print("yor military life malyear")
+    print("your military life happy")
 if(time2 - time1 > time2 - time3):
-    print("fighting")
-
-    print(time2 - time3)
+    print("your military life dark")
