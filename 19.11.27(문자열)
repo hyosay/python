@@ -1,0 +1,9 @@
+# -*- coding: utf-8 -*-
+
+#슬라이싱 (slicing)
+a = "HELLO WORLD"
+print(a[2:]) #LLO WORLD
+print(a[2:9]) #LLO WOR 주의
+print(a[:-2]) #HELLO WOR
+print(a[:]) #HELLO WORLD
+print(a[0:7:2]) #HEOW  0부터 7까지 출력을 하돼 2칸씩 뛴다
