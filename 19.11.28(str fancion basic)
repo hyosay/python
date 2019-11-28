@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+a = "HELLO WORLD"
+b = a.replace("Hello","Hi")
+print(b)
+
+print(a.count('L'))  #갯수
+print(a.find("WOR")) #
+print(a.upper()) #대문자로 반환
+print(a.lower()) #소문자로 반환
+print(a.strip("Hello")) #지우는 함수  결과 = WORLD
+print(a.split(" ")) #배열로 반환
+
+c = "100"
+d = int(c) # 문자열을 숫자로 반환 
+print(d + 100) # 200
+print(c.zfill(5)) #앞자리를 채워서 무조건 5자리를 유지
+a = 100
