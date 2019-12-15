@@ -1,0 +1,9 @@
+a = "Hello world"
+
+a.lower() #hello world
+a.upper() #HELLO WORLD
+a.count("l") #3
+a.find("e")  #1
+s.replace("Hello","HELLO") # HELLO world
+
+one = str(1)
