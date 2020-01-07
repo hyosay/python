@@ -14,5 +14,5 @@ class Car:
     def show_info(self):
         print("name :", self.name, "/ color : " ,self.color)
 
-Car1 = Car("소나타", "Red")
+Car1 = Car("소나", "Red")
 Car1.show_info()
