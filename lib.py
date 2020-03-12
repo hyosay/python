@@ -1,16 +1,51 @@
+import numpy as np
+import matplotlib.pylab as plt
 
-import random
-c = 100
-
-
-for i in range(1, 100):
-    d = random.randint(1, 10)
-    c = c - d
-    if c < 0:
-        break
-
-    print(c)
-
-
+def AND(x1,x2):
+    x = np.array([x1, x2])
+    w = np.array([0.5, 0.5])
+    b = -0.7
+    tmp = np.sum(x*w) + b
+    if tmp <= 0:
+        return 0
+    else:
+        return 1
 
 
+def NAND(x1,x2):
+    x = np.array([x1, x2])
+    w = np.array([-0.5, -0.5])
+    b = 0.7
+    tmp = np.sum(x*w) + b
+    if tmp <= 0:
+        return 0
+    else:
+        return 1
+
+
+def OR(x1,x2):
+    x = np.array([x1, x2])
+    w = np.array([0.5,0.5])
+    b = -0.2
+    tmp = np.sum(x*w) + b
+    if tmp <= 0:
+        return 0
+    else:
+        return 1
+
+
+def XOR(x1,x2):
+    s1 = NAND(x1,x2)
+    s2 = OR(x1,x2)
+    y = AND(s1,s2)
+    return y
+
+
+def step_function(x):
+    return np.array(x > 0, dtype = np.int)
+
+x = np.arange(-5.0, 5.0, 0.1)
+y = step_function(x)
+plt.plot(x,y)
+plt.ylim(-0.1, 1.1)
+plt.show()
