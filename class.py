@@ -1,57 +1,32 @@
-#클래스(class): 반복되는 불필요한 소스코드를 최소화 하면서
-# 현실 세계의 사물을 컴퓨터 프호그래밍 상에서
-# 쉽게 표현할 수 있도록 해주는 프로그래밍 기술
-
-# 인스턴스: 클래스호 정의된 객체를 ㅠㅡ호그램 상에서 이용할 수 있게 만든 변수
-
-# 클래스의 멤버 : 클래스 내부에 포함되는 변수
-# 클래스의 함수: 클래스 내부에 포함되는 함수, 메소드라고 부릅니다.
-
-#  실수형 문자열형 같이 자동차형이라는 하나의 자료형을 만들었다고 보면 됨
-'''
-class Car:
-    # 클래스의 생성자
-    def __init__(self, name, color):
-        self.name = name #  클래스의 멤버
-        self.color = color # 클래스의 멤버
-    # 클래스 소멸자
-    def __del__(self):
-        print("삭제합니다")
-    # 클래스의 메소드
-    def show_info(self):
-        print("name :", self.name, "/ color : " ,self.color)
-    # Setter 메소드 (바꾸는 메소드)
-    def set_name(self, name):
-        self.name = name
-
-Car1 = Car("소나타", "Red")
-Car1.set_name("그랜저")
-
-Car1.show_info()
-Car2 = Car("아반뗴", "blue")
-Car2.show_info()
-print(Car1.name, "을 구매했습니다!")
-del Car1
-
-'''
-
-# 클래스 상속: 다른 클래스의 멤버 변수와 메소드를 물려 받아 사용하는 기법
-# 부ㅗ와 자식 관계가 존재합니다.
-class Unit:
-    def __init__(self, name ,power):
+class Unit:  #Unit class를 작성
+    def __init__(self, name, power):  #이름과 전투력을 정의
         self.name = name
         self.power = power
-    def attack(self):
-        print(self.name, "이(가) 공격을 수행합니다. [전투력 :",self.power, "]")
+
+    def attack(self):      #공격을 하는 함수
+        print(self.name, "이(가) 공격을 수행합니다. [전투력 :", self.power, "]")
+
+
 unit = Unit("전효성", 285)
 unit.attack()
-class Monster(Unit):
-    def __init__(self,name, power, type):
+
+
+class Monster(Unit):  # Unit을 상속
+    def __init__(self, name, power, type):  #이름,전투력, 종류를 정의
         self.name = name
         self.power = power
         self.type = type
+
     def show_info(self):
         print("몬스터 이름 :", self.name, "/ 몬스터 종류 :", self.type)
-monster = Monster(" 슬라임", 10, "초금 ")
+
+
+monster = Monster(" 슬라임", 10, "초급 ")
 monster.attack()
-monster.show_info()
+
+# class와 class 상속을 공부하고있었습니다.
+# 저는 25번쨰 행에 monster.attack()라는 소스코드 작성 후 스크립트를 싱행시켜 "슬라임 이(가) 공격을 수행합니다. [전투력 : 10 ]" 라는 출력값을 받았습니다.
+# 하지만 저는 25번쨰 행에 있는 monster.attack() 소스코드를 지운 후 스크립트를 싱행시켜 콘솔을 통해 monster.attack() 함수를 호출하고싶습니다.
+# 저는 input()을 통해 monster.attack()실행을 시켜보려고 시도하였지만
+# input()을 통해 monster.attack()을 입력하면 결과값으로 문자열인"monster.attack()"이 그대로 출력되었습니다.
+#스크립트에 25행과 같은 함수실행 소스 코드를 작성하지 않은 채로 스크립트를 실행 시켜 출력 결과값(콘솔) 창에서 함수를 호출 할 수 있는 방법이 있는지 궁금합니다.
